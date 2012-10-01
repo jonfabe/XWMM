@@ -5,6 +5,7 @@ function xbmcJsonRPC(params) {
 	Ext.Ajax.request({
 		url: inputUrl,
 		params : params,
+        contentType : 'application/json',             
 		method: "POST",
 		async: false,
 		success: function (t){
