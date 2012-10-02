@@ -1,10 +1,12 @@
 	function xbmcJsonRPC(params) {
 		var inputUrl = '/jsonrpc'
 		var myjson = '';
+        Ext.Ajax.defaultHeaders = {
+            'Content-Type' : 'application/json'
+        };
 		Ext.Ajax.request({
 			url: inputUrl,
 			params : params,
-            contentType : 'application/json',             
 			method: "POST",
 			async: false,
 			success: function (t){
